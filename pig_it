@@ -1,0 +1,16 @@
+def pig_it(text):
+    words = text.split()
+    for i in range(len(words)):
+        words[i] = list(words[i])
+    for i in range(len(words)):
+        words[i].append(words[i][0])
+        words[i].pop(0)
+    string = ''
+    for i in range(len(words)):
+        for j in words[i]:
+            string += j
+        string += "ay"
+        if i != len(words) - 1:
+            string += ' '
+    return string
+print(pig_it("wod jigh"))
